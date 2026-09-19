@@ -1,1 +1,54 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Clovis · Rex-3D studio</title><link rel="stylesheet" href="styles.css"></head><body><header><a class="brand" href="#top"><span class="mark">R</span> CLOVIS</a><nav><a href="#studio">Studio</a><a href="#model">Model</a><a href="#access">Access</a></nav><a class="pill" href="#studio">Try the model</a></header><main id="top"><section class="hero"><div><p class="eyebrow">CLOVIS STUDIO · 01</p><h1>Give your scenes<br><em>spatial sense.</em></h1><p class="lede">Rex-3D reads geometry, layout, and collision relationships so teams can build worlds that behave.</p><a class="button" href="#studio">Try the studio <span>↗</span></a></div><div class="orb"><div class="wire"></div><div class="orb-label">REX / 3D<br><small>scene intelligence</small></div></div></section><section class="strip"><div><b>01</b><span>Geometry-aware</span></div><div><b>02</b><span>Private by design</span></div><div><b>03</b><span>Built for creators</span></div></section><section id="studio" class="studio"><div class="section-head"><p class="eyebrow">THE STUDIO · 02</p><h2>Test Rex-3D.<br>See the shape.</h2></div><div class="workspace"><label class="drop" id="drop"><input id="file" type="file" accept=".glb,.gltf,.obj,.ply"><span class="drop-icon">＋</span><strong id="file-name">Drop a 3D file here</strong><small>GLB, GLTF, OBJ, or PLY · up to 50 MB</small></label><div class="result"><div class="result-top"><span class="status"><i></i> Rex-3D is ready</span><span class="mono">v0.1 / private beta</span></div><p id="result-copy">Upload a scene to receive a geometry summary, collision notes, and spatial prompts.</p><button id="analyze" class="button dark">Analyze scene <span>→</span></button></div></div></section><section id="model" class="model"><div><p class="eyebrow">MODEL NOTES · 03</p><h2>A focused model<br>for 3D reality.</h2></div><p>Clovis is designed as a closed-source system. Keep training data permissions, weights, and inference credentials behind your private infrastructure while exposing a simple creator-facing studio.</p></section></main><footer id="access"><span>REX-3D / 2026</span><span>Private model · public studio shell</span></footer><script src="app.js"></script></body></html>
+<html lang="en"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Clovis is the private studio for testing Rex-3D geometry intelligence.">
+  <title>Clovis — Rex-3D studio</title>
+  <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" type="text/css" href="chrome-extension://mfidniedemcgceagapgdekdbmanojomk/css/content-shared.css"><link rel="stylesheet" type="text/css" href="chrome-extension://mfidniedemcgceagapgdekdbmanojomk/css/content-lite.css"></head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Clovis home"><span class="wordmark-mark">C</span><span>CLOVIS</span></a>
+    <nav class="nav-links" aria-label="Primary navigation"><a href="#studio">Studio</a><a href="#method">Method</a><a href="#model">Model</a></nav>
+    <a class="header-cta" href="#studio">Open studio <span>↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <p class="kicker"><span class="pulse"></span> PRIVATE 3D INTELLIGENCE <span class="slash">/</span> 01</p>
+        <h1>Make space<br><em>understandable.</em></h1>
+        <p class="hero-lede">Clovis is the test bench for Rex-3D — a private model learning shape, structure, and the way objects occupy a world.</p>
+        <div class="hero-actions"><a class="primary-button" href="#studio">Try a model <span>→</span></a><a class="text-button" href="#method">How it works <span>↓</span></a></div>
+        <div class="hero-proof"><span class="proof-line"></span><span>Local-first inference</span><span>·</span><span>GLB / OBJ / PLY</span></div>
+      </div>
+      <div class="hero-art" aria-label="Abstract Rex-3D geometry visualization" role="img">
+        <div class="art-orbit orbit-a"></div><div class="art-orbit orbit-b"></div><div class="art-orbit orbit-c"></div>
+        <div class="art-core"><span class="core-grid"></span><span class="core-label">RX<br><small>03</small></span></div>
+        <span class="art-note note-a">mesh / 01</span><span class="art-note note-b">0.92 confidence</span><span class="art-note note-c">x · y · z</span>
+      </div>
+    </section>
+
+    <section class="signal-bar shell" aria-label="Rex capabilities"><div><strong>01</strong><span>Geometry-aware</span></div><div><strong>02</strong><span>Collision-ready</span></div><div><strong>03</strong><span>Private by design</span></div><div class="signal-meta">MODEL STATUS <b>TRAINING</b></div></section>
+
+    <section id="studio" class="studio shell">
+      <div class="section-intro"><p class="kicker">THE STUDIO <span class="slash">/</span> 02</p><h2>Put a mesh<br>through its paces.</h2><p>Upload one object and get a clean read on its geometry. Your file stays in this browser demo until you connect your private Rex runtime.</p></div>
+      <div class="studio-frame">
+        <div class="studio-toolbar"><div class="toolbar-title"><span class="live-dot"></span><span>REX WORKSPACE</span><small>v0.2 private beta</small></div><div class="toolbar-actions"><button class="toolbar-button active" data-view="inspect">Inspect</button><button class="toolbar-button" data-view="notes">Notes</button><span class="toolbar-divider"></span><span class="toolbar-code">SESSION / 0042</span></div></div>
+        <div class="studio-grid">
+          <div class="preview-panel"><div class="panel-label">LIVE PREVIEW <span>01</span></div><div class="mesh-preview" id="mesh-preview"><div class="preview-ring ring-one"></div><div class="preview-ring ring-two"></div><div class="preview-shape"><span></span><i></i></div><div class="preview-crosshair"><b></b><b></b></div><div class="preview-caption"><span id="preview-name">waiting for a mesh</span><span id="preview-type">NO INPUT</span></div></div><div class="preview-footer"><span>DRAG TO ORBIT</span><span class="axis"><b>X</b><b>Y</b><b>Z</b></span></div></div>
+          <div class="input-panel"><div class="panel-label">INPUT <span>02</span></div><label class="upload-zone" id="drop-zone" for="file-input"><input id="file-input" type="file" accept=".glb,.gltf,.obj,.ply"><span class="upload-symbol">+</span><strong>Drop a mesh here</strong><span>or browse your files</span><small>GLB · GLTF · OBJ · PLY <b>50 MB max</b></small></label><div class="input-row"><div><label for="prompt">Optional context</label><input id="prompt" type="text" placeholder="e.g. modular sci-fi chair"></div><button id="analyze" class="analyze-button" type="button">Analyze <span>↗</span></button></div><p class="privacy-note"><span>⌁</span> Files are used for this session only. No API key is required for this demo.</p></div>
+        </div>
+        <div class="results-panel"><div class="panel-label">READOUT <span>03</span></div><div class="readout-grid"><div class="readout-empty" id="readout-empty"><span class="empty-mark">＋</span><span>Upload a mesh to populate the readout.</span></div><div class="metric"><small>FORMAT</small><strong id="metric-format">—</strong><span id="metric-size">waiting</span></div><div class="metric"><small>EST. SURFACE</small><strong id="metric-surface">—</strong><span>scene units²</span></div><div class="metric"><small>WATERTIGHT</small><strong id="metric-water">—</strong><span>topology check</span></div><div class="metric"><small>REX SIGNAL</small><strong id="metric-signal">—</strong><span>geometry confidence</span></div></div></div>
+      </div>
+    </section>
+
+    <section id="method" class="method shell"><div><p class="kicker">THE METHOD <span class="slash">/</span> 03</p><h2>From pixels<br>to presence.</h2></div><div class="method-list"><article><span>01</span><div><h3>See the shape</h3><p>Rex learns visual structure from multi-view renders and real meshes, building a consistent sense of volume.</p></div></article><article><span>02</span><div><h3>Read the rules</h3><p>Collision and scene data teach the model where objects meet, sit, and move through space.</p></div></article><article><span>03</span><div><h3>Keep control</h3><p>Your weights, prompts, and inference stay behind your own infrastructure from training to production.</p></div></article></div></section>
+
+    <section id="model" class="model shell"><div class="model-card"><div class="model-card-top"><span class="model-badge">RX</span><span class="model-version">REX-3D / 0.2</span></div><div class="model-visual"><span></span><span></span><span></span></div><div class="model-card-bottom"><span>PRIVATE CHECKPOINT</span><span class="model-state"><i></i> IN TRAINING</span></div></div><div class="model-copy"><p class="kicker">THE MODEL <span class="slash">/</span> 04</p><h2>Small surface.<br><em>Big intent.</em></h2><p>Clovis is the public-facing studio shell. Rex-3D is the private system behind it: a focused model for 3D geometry, scenes, and collision-aware understanding.</p><a class="text-button" href="#studio">Run another test <span>↗</span></a></div></section>
+  </main>
+  <footer class="site-footer shell"><a class="wordmark" href="#top"><span class="wordmark-mark">C</span><span>CLOVIS</span></a><span>Private model · public studio shell · 2026</span><span>Rex-3D / local-first</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+
+
+</body><div id="codex-agent-overlay-root" data-codex-agent-overlay-root="true"></div></html>
